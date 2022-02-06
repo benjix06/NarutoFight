@@ -1,5 +1,4 @@
 # Will change the map and implement more items
-from matplotlib.pyplot import title
 
 level_map = [
     '                            ',
