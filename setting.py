@@ -21,7 +21,7 @@ screen_height = tile_size * len(level_map)
 
 # colors
 # ! Will implement chracter
-bg_color = '#A2F24F'
+bg_color = 'black'
 player_color = '#FFFFFF'
 tile_color = "#94D7F2"
 

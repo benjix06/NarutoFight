@@ -1,12 +1,16 @@
 import pygame
 
+from setting import player_color
+
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, position):
         super().__init__()
         self.image = pygame.Surface((32, 64))
-        self.image.fill("red")
+        self.image.fill(player_color)
         self.rect = self.image.get_rect(topleft=position)
+
+        # Player movement
         self.direction = pygame.math.Vector2(0, 0)
         self.speed = 5
 
