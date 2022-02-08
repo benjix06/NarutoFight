@@ -1,6 +1,8 @@
-import pygame
-from setting import *
 import sys
+
+import pygame
+
+from setting import *
 
 
 class Player(pygame.sprite.Sprite):
@@ -24,7 +26,7 @@ class Player(pygame.sprite.Sprite):
         self.on_floor = False
 
         # How high the player can jump
-        self.jump_speed = 15
+        self.jump_high = 18
 
     def get_input(self):
         keys = pygame.key.get_pressed()
@@ -38,9 +40,8 @@ class Player(pygame.sprite.Sprite):
 
         # Set negative value to make the play jump upward
         # ! Pygame topleft is 0,0
-        if keys[pygame.K_SPACE]:
-            self.direction.y = -self.jump_speed
-            print("jump")
+        if (keys[pygame.K_SPACE] or keys[pygame.K_UP]) and self.on_floor:
+            self.direction.y = -self.jump_high
 
         if keys[pygame.K_ESCAPE]:
             pygame.quit()
@@ -81,8 +82,8 @@ class Player(pygame.sprite.Sprite):
                     self.direction.y = 0
 
         # Case: the user is not on the ground
-        # if self.on_floor and self.direction.y != 0:
-        #     self.on_floor = False
+        if self.on_floor and self.direction.y != 0:
+            self.on_floor = False
 
     def update(self):
         self.get_input()
