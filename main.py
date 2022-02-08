@@ -11,7 +11,7 @@ pygame.init()
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Naruto Fight")
 clock = pygame.time.Clock()
-level = Level(level_map, screen)
+level = Level()
 
 while True:
     for event in pygame.event.get():

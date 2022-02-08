@@ -1,5 +1,4 @@
 # Will change the map and implement more items
-from matplotlib.pyplot import title
 
 level_map = [
     '                            ',
@@ -21,14 +20,14 @@ screen_height = tile_size * len(level_map)
 
 # colors
 # ! Will implement chracter
-bg_color = '#A2F24F'
+bg_color = 'black'
 player_color = '#FFFFFF'
 tile_color = "#94D7F2"
 
 # camera
 camera_padding = {
-    "left": 150,
-    "right": 250,
-    "top": 150,
-    "bottom": 200,
+    "left": 100,
+    "right": 200,
+    "top": 70,
+    "bottom": 150,
 }
