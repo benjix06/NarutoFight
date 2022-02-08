@@ -17,6 +17,7 @@ level_map = [
 tile_size = 64
 screen_width = 1280
 screen_height = tile_size * len(level_map)
+default_fps = 60
 
 # colors
 # ! Will implement chracter

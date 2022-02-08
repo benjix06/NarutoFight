@@ -1,8 +1,6 @@
 import pygame
-from sqlalchemy import true
-
 from setting import *
-from setting import player_color
+import sys
 
 
 class Player(pygame.sprite.Sprite):
@@ -44,6 +42,10 @@ class Player(pygame.sprite.Sprite):
             self.direction.y = -self.jump_speed
             print("jump")
 
+        if keys[pygame.K_ESCAPE]:
+            pygame.quit()
+            sys.exit()
+
     # Apply the gravity
     def gravity_method(self):
         self.direction.y += self.gravity
@@ -79,8 +81,8 @@ class Player(pygame.sprite.Sprite):
                     self.direction.y = 0
 
         # Case: the user is not on the ground
-        if self.on_floor and self.direction.y != 0:
-            self.on_floor = False
+        # if self.on_floor and self.direction.y != 0:
+        #     self.on_floor = False
 
     def update(self):
         self.get_input()
