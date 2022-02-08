@@ -2,6 +2,7 @@ import pygame
 from sqlalchemy import true
 
 from setting import *
+from setting import player_color
 
 
 class Player(pygame.sprite.Sprite):
