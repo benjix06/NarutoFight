@@ -26,8 +26,8 @@ tile_color = "#94D7F2"
 
 # camera
 camera_padding = {
-    "left": 100,
+    "left": 150,
     "right": 200,
-    "top": 70,
-    "bottom": 150,
+    "top": 100,
+    "bottom": 250,
 }
